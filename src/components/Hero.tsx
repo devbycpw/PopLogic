@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Play, Star, Sparkles, Send, CheckCircle2, X, Activity } from "lucide-react";
 import { CLIENTS } from "../data";
-import MorphingExperience from "./MorphingExperience";
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -122,20 +121,6 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        {/* Right Column: Central 3D Experience (X & Y rotate, vertex noise shape) */}
-        <div className="lg:col-span-5 order-1 lg:order-2">
-          <motion.div
-            style={{
-              transform: `scale(${scale})`,
-              opacity: opacity,
-              filter: `blur(${blur}px)`,
-            }}
-            className="w-full relative"
-          >
-            {/* Morphing Canvas */}
-            <MorphingExperience />
-          </motion.div>
-        </div>
       </div>
 
       {/* Standard indicator down */}

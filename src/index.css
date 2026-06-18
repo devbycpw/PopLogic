@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Syne", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-cream: #FDFBF7;
+  --color-deep-blue: #0b469c;
+  --color-marine-blue: #1175f0;
+  --color-electric-cyan: #00F0FF;
+  --color-text-dark: #0B2545;
+  --color-text-light: #FDFBF7;
+  --color-text-muted: #8DA9C4;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+}
+
+/* Custom scrollbar to match the futuristic branding style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-deep-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-marine-blue);
+}
+
+/* Custom animation for the infinite slider loop */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 35s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}

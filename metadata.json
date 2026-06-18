@@ -1,0 +1,6 @@
+{
+  "name": "PopLogic",
+  "description": "Premium corporate portfolio and interactive experience for PopLogic, a creative & media agency fusing bold artistic expression with strategic logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
